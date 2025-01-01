@@ -16,9 +16,9 @@ while True:
         ans = a - b
         user = input(f"{a} - {b} = ")
     if user == str(ans):
-        print("Ве4334рно")
+        print("Верно")
         points["player"] += 1
     else:
-        print("Ты3535232 ошибся, купкуппопробуй снова")
+        print("Тыошибся, купкуппопробуй снова")
         points["comp"] += 1
-    print(f"Тв3454334345ой счёт: {points["player"]}:{points["comp"]}")
+    print(f"Твой счёт: {points["player"]}:{points["comp"]}")
