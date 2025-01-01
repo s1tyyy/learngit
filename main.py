@@ -5,9 +5,20 @@ points = {
     "player": 0
 }
 
+def is_odd(number: int):
+    if number % 2 == 0:
+        return False
+    else:
+        return True
+
+
 while True:
-    a = random.randint(10, 90)
-    b = random.randint(10, 90)
+    a = random.randint(10, 110)
+    if is_odd(a):
+        continue
+    b = random.randint(10, 120)
+    if is_odd(b):
+        continue
     op = random.choice(("+", "-"))
     if op == "+":
         ans = a + b
@@ -16,9 +27,9 @@ while True:
         ans = a - b
         user = input(f"{a} - {b} = ")
     if user == str(ans):
-        print("Верно")
+        print("Верно!")
         points["player"] += 1
     else:
-        print("Тыошибся, купкуппопробуй снова")
+        print("Ты ошибся. Попробуй ещё разочек.")
         points["comp"] += 1
-    print(f"Твой счёт: {points["player"]}:{points["comp"]}")
+    print(f"Счёт: {points["player"]}:{points["comp"]}")
